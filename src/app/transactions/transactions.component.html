@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row transitions-details mt-4">
+    <h6 class="text-muted pl-3 py-2"> <i class="fa fa-clock-o" aria-hidden="true"></i> Recent Transactions</h6>
+    <div class="col-12">
+      <table class="table">
+        <cdk-virtual-scroll-viewport tvsItemSize #transactionsScroll itemSize="10" class="virtual-scroll"
+        (scrolledIndexChange)="getNextBatchOnScroll('transactions', 'loadTransactions')">
+          <thead class="bg-light">
+            <tr>
+              <td class="border-0">Type</td>
+              <td class="border-0">Amount XTZ (USD)</td>
+              <td class="border-0">Date</td>
+              <td class="border-0">Address</td>
+            </tr>
+          </thead>
+          <tbody> 
+          <tr *cdkVirtualFor="let transaction of transactionsList.data; let i = index; trackBy: trackByIdx ">
+            <ng-container *ngIf="transaction.length > 0">
+              <td class="border-top-0 py-4">
+                <span *ngIf="transaction[2] === 'transaction'" class="rounded-pill px-2 py-1" [class]="transaction[2] === 'transaction'?'status-recieved text-success': ''">
+                  {{ transaction[2] }}
+                </span>
+                <span *ngIf="transaction[2] === 'unfreeze'" class="rounded-pill px-2 py-1" [class]="transaction[2] === 'unfreeze'?'status-sent bg-light': ''">
+                  {{ transaction[2] }}
+                </span>
+                <span *ngIf="transaction[2] === 'bake'" class="rounded-pill px-2 py-1" [class]="transaction[2] === 'bake'?'status-reward text-secondary': ''">
+                  {{ transaction[2] }}
+                </span>
+            </td>
+            <td class="border-top-0 amount py-4" [class]="transaction[2] !== 'transaction'?'text-muted': ''">+ {{ transaction[4] | currency:'XTZ' | slice:3 }} XTZ {{ transaction[4] | currency:'USD' | slice:1:-1 }} USD</td>
+            <td class="border-top-0 py-4">{{ transaction[1] | date :'MMM d y, hh:mm'}}</td>
+            <td class="border-top-0 py-4">{{ transaction[3] | ellipse}}</td>
+            </ng-container>
+          </tr>
+        </tbody>
+        </cdk-virtual-scroll-viewport>
+    </table>
+    </div>
+  </div>
+</div>
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>

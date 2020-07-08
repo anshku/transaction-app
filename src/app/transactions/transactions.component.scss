@@ -1,0 +1,30 @@
+.status-pending td span{
+    border: 1px solid #e7e7e7;
+}
+.status-pending{
+    color: #c4c4c4;
+}
+.status-recieved{
+    background-color: #ddf4ea;
+}
+.status-reward{
+    background-color: #fced7c;
+}
+.status{
+    font-weight: 600;
+}
+.amount span{
+    color: #9d9d9d;
+}
+.transitions-details{border: 1px solid #dbdbdb;}
+.virtual-scroll {
+    overflow: initial;
+    contain: style;
+    width: 100%;
+    overflow-y: scroll;
+    min-height: 80vh;
+}
+
+::ng-deep cdk-virtual-scroll-viewport div {
+    display: table !important;
+}

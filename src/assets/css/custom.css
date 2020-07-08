@@ -1,0 +1,336 @@
+ body{
+    margin: 0 auto;
+
+}
+.main-color {
+    color: #5F3C87;
+}
+a:hover{
+    text-decoration: none;
+}
+.main-bg-color {
+ background-color:#6e4b95; 
+}
+table {
+  min-height: 500px;
+}
+.form-control:focus , .custom-select:focus {
+    border-color: #6e4b95;
+    box-shadow: 0 0 0 0.2rem rgba(110, 75, 149, 0.29);
+}
+/* header css start */
+header {
+  background-color: #6e4b95;
+}
+header .logo{
+  color: #000;
+  font-size: 1.25rem;
+}
+.header_search{
+  max-width: 500px;
+  width: 100%;   
+}
+.header_search input{
+  width: 100% !important;
+}
+.nav-link{
+  font-size: 13px;
+}
+.nav-item.dropdown .nav-link i{
+  font-size: 20px;
+}
+
+.nav-item.dropdown .dropdown-menu{
+  left: auto;
+  right: 0;;
+  box-shadow: 0px 2px 10px #b9b6b6;
+  max-width: 300px;
+  width: 200px;
+  position: absolute;
+}
+.header_search .fa-search{
+  color: rgba(0,0,0,0.54);
+  font-size: 16px;
+  line-height: 16px;
+
+}
+/* header css end */
+/* login page css start */
+.login-form{
+    height: 100vh;
+}
+.login-form form{
+    max-width: 350px;
+    width: 100%;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+}
+.login-form form .form-group{
+    height: 50px;
+}
+.login-form form .form-group .fa{
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 16px;
+}
+.login-form .form-control:focus{
+    border-color: #6e4b95;
+    box-shadow: 0 0 0 0.2rem rgba(110, 75, 149, 0.29);
+}
+
+/* login page css end */
+
+/* sidebar css start*/
+.sidebar ul li a{
+    font-size: 14px;
+    padding: 13px 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #6f6f6f;
+}
+.sidebar ul li a:hover{
+    color: #6e4b95;
+}
+.sidebar ul li a.active{
+    background-color: #dcd0e8;
+    color:  #5F3C87;
+}
+.sidebar ul li a i{
+    font-size: 20px;
+}
+.main-section{
+    height: 100vh;
+}
+.top-right-sec h4{
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+.top-right-sec a.new-documents{
+    background-color: #fff;
+    box-shadow: 0px 1px 5px #bbb;
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 600;
+}
+.top-right-sec a i{
+    color: #6f6f6f;
+}
+#browse-table table tr th , #playlist-table table tr th , #users-table table tr th{
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.33px;
+  line-height: 16px;
+  color: rgba(0,0,0,0.54);
+}
+#playlist-table table tr th{
+  width: 25%;
+}
+#users-table table tr td, #users-table table tr th{
+  width: 15%;
+}
+#users-table table tr td:last-child , #users-table table tr th:last-child{
+  width: 10%;
+}
+#users-table tr td.status{
+   font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 16px;
+  color: rgba(0,0,0,0.54);
+}
+#users-table tr td.status .fas.fa-check-circle , #add-users .fas.fa-check-circle  {
+  color: #2EC775;
+}
+#users-table tr td.status .fas.fa-times{
+  color: #DF3B5D;
+}
+#browse-table table tr th:first-child , #browse-table table tr td:first-child{
+    width: 3%;
+    font-size: 14px;
+    color: rgba(0,0,0,0.54);
+}
+#browse-table table tr th:nth-child(2) , #browse-table table tr td:nth-child(2){
+    width: 25%;
+}
+#browse-table table tr td , #playlist-table table tr td , #users-table table tr td{
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.33px;
+  line-height: 16px;
+  color: rgba(0,0,0,0.87);
+}
+#browse-table table tr td:last-child , #playlist-table table tr td:last-child a , #users-table table tr td:last-child a{
+  color: #6F6F6F;
+
+}
+#browse-table table tr td.new span{
+    color: #fff;
+    background-color: #56d17a;
+    font-size: 12px;
+    padding: 2px 9px;
+    border-radius: 3px;
+}
+.playlist-options{
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #bbbaba;
+    padding: 10px 0px;
+    border-radius: 3px;
+    top: 100%;
+    width: 250px;
+    left: 2px;
+    display: none;
+   font-size: 13px;
+   font-weight: 500;
+  letter-spacing: 0.33px;
+  line-height: 16px;
+  color: rgba(0,0,0,0.54);
+}
+
+.playlist-options span{
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  color: #0091FF;
+}
+.playlist-options ul li{
+    font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  color: rgba(0,0,0,0.87);
+}
+.playlist-options .form-group  input{
+  border: 1px solid #C0C5CF;
+  border-radius: 4px;
+  background-color: rgba(192,197,207,0.6);
+}
+
+#browse-table table tr td:first-child:hover .playlist-options{
+    display: block;
+}
+
+#browse-table .fas.fa-heart{
+  color: #DF3B5D;
+}
+
+
+.playlist-options:after,
+.playlist-options:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.playlist-options:after {
+    border-color: transparent transparent #fff;
+    border-width: 10px;
+    top: -19px;
+    left: 9px;
+}
+
+.playlist-options:before {
+    border-color: transparent transparent #d2d2d2;
+    border-width: 11px;
+    top:-21px;
+    left: 8px;
+
+}
+.playlist-options .custom-control-input:checked~.custom-control-label::before {
+    border-color: #56d17a;
+    background-color: #56d17a;
+}
+.territorieslicensed .custom-control-input:checked~.custom-control-label::before{
+    border-color: #6e4b95;
+    background-color: #6e4b95;
+}
+/* sidebar css end */
+/* favorites page css */
+.modal-btn .process_btn , .modal-btn .dlt_btn{
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.03px;
+  line-height: 20px;
+  text-align: center;
+  color: #000;
+  padding: 10px 40px;
+  background-color: transparent;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+}
+.modal-btn .dlt_btn{
+  background-color: #6e4b95;
+}
+#deleteModal .modal-body p{
+   font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  color: rgba(0,0,0,0.87);
+}
+#deleteModal .modal-content , #downloadModal .modal-content , #addlistModal .modal-content {
+  border-radius: 0;
+}
+
+
+/* favorites page css end */
+
+/* create new user css start */
+
+.new-users-form label{
+   font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.03px;
+  line-height: 18px;
+  color: #000;
+}
+.new-users-form input{
+  height: 43px;
+}
+.new-users-form label.custom-control-label{
+   font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  color: rgba(0,0,0,0.87);
+}
+.new-users-form .form-group .fas.fa-caret-down{
+    right: 11px;
+    bottom: 11px;
+}
+.new-users-form .custom-select{
+  background: transparent;
+}
+/* create new user css end */
+/* pagination css start */
+.bottom-pagination a{
+  color: #757575;
+}
+.table-pagination span , .table-pagination select{
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.33px;
+  line-height: 16px;
+  color: rgba(0,0,0,0.54);
+}
+/* pagination css end */
+
+/* media css start */
+
+@media(max-width: 767px){
+  .new-users-form{
+    width: 100% !important;
+  }
+}
+
+
+/* media css end */
