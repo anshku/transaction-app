@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectorRef, HostListener } from '@angular/core';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import {select, Store} from '@ngrx/store';
 import { GetItems } from '../store/action/transaction.actions';
@@ -38,7 +38,6 @@ export class TransactionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    window.scrollTo(0, 0);
     this.loadTransactions();
   }
 
@@ -47,20 +46,15 @@ export class TransactionsComponent implements OnInit {
     this.store.dispatch(new GetItems({cursor: this.transactionsList.lastCursor, limit: this.transactionsList.limit}));
   }
 
-  // call next batch of artist list on scroll
-  getNextBatchOnScroll(objInitName, functionName) {
-    if (!this[objInitName + 'List'].noMoreData) {
-      const end = this[objInitName + 'Scroll'].getRenderedRange().end;
-      const total = this[objInitName + 'Scroll'].getDataLength();
-      if (end === total) {
-        this[objInitName + 'List'].noMoreData = true;
-        this[functionName]();
-      }
-    }
-  }
-
   trackByIdx(i) {
     return i;
   }
+
+  @HostListener('scroll', ['$event'])
+  onScroll(event: any) {
+    if (event.target.offsetHeight + event.target.scrollTop >= event.target.scrollHeight) {
+      this.loadTransactions();
+    }
+}
 
 }

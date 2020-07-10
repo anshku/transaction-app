@@ -3,8 +3,7 @@
     <h6 class="text-muted pl-3 py-2"> <i class="fa fa-clock-o" aria-hidden="true"></i> Recent Transactions</h6>
     <div class="col-12">
       <table class="table">
-        <cdk-virtual-scroll-viewport tvsItemSize #transactionsScroll itemSize="10" class="virtual-scroll"
-        (scrolledIndexChange)="getNextBatchOnScroll('transactions', 'loadTransactions')">
+        <cdk-virtual-scroll-viewport (scroll)="onScroll($event)" tvsItemSize #transactionsScroll itemSize="10" class="virtual-scroll">
           <thead class="bg-light">
             <tr>
               <td class="border-0">Type</td>
