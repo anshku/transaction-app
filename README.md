@@ -26,4 +26,16 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
+Install java for running selenium web-driver
+
+`sudo apt-get install openjdk-8-jre`
+
+Go to node module and run
+
+`node_modules/.bin/webdriver-manager update`
+
+`node_modules/.bin/webdriver-manager start`
+
+Open new terminal and Run
+
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
