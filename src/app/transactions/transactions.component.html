@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row transitions-details mt-4">
     <h6 class="text-muted pl-3 py-2"> <i class="fa fa-clock-o" aria-hidden="true"></i> Recent Transactions</h6>
-    <div class="col-12">
+    <div class="col-12 transaction">
       <table class="table">
-        <cdk-virtual-scroll-viewport (scroll)="onScroll($event)" tvsItemSize #transactionsScroll itemSize="10" class="virtual-scroll">
+          <cdk-virtual-scroll-viewport (scroll)="onScroll($event)" #transactionsScroll itemSize="80" class="virtual-scroll">
           <thead class="bg-light">
             <tr>
               <td class="border-0">Type</td>
@@ -13,7 +13,7 @@
             </tr>
           </thead>
           <tbody> 
-          <tr *cdkVirtualFor="let transaction of transactionsList.data; let i = index; trackBy: trackByIdx ">
+          <tr *cdkVirtualFor="let transaction of transactionsList.data;" id="transactions">
             <ng-container *ngIf="transaction.length > 0">
               <td class="border-top-0 py-4">
                 <span *ngIf="transaction[2] === 'transaction'" class="rounded-pill px-2 py-1" [class]="transaction[2] === 'transaction'?'status-recieved text-success': ''">
